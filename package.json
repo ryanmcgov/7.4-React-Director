@@ -1,0 +1,15 @@
+{
+  "name": "react-director",
+  "version": "1.0.0",
+  "description": "React HW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "director": "^1.2.8",
+    "react": "^0.13.3"
+  }
+}
