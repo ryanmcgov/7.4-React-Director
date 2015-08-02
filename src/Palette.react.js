@@ -16,12 +16,12 @@ var Palette = React.createClass({
 
     return allPalettes.map(function(item) {
       return (
-        <div className='palette' data-js={item.id}>
+        <div className='all__palettes' data-js={item.id}>
           <a href={'/palettes/' + item.id}>
             <h3>{item.title}</h3>
           </a>
           <p>{item.category}</p>
-          <div className='colorContainer'>
+          <div className='palette__color'>
           {self._listPaletteColors(item)}
           </div>
         </div>
@@ -33,14 +33,14 @@ var Palette = React.createClass({
     var colorKeys = Object.getOwnPropertyNames(p.colors);
     var paletteColors = colorKeys.map(function(colKey, i) {
       return (
-        <div className='color' key={p.id + colKey} style={{backgroundColor: p.colours[colKey]}}>
+        <div className='color' key={p.id + colKey} style={{backgroundColor: p.colors[colKey]}}>
           <div className='hex' style={{color: p.colors[colKey]}} >{p.colors[colKey]}</div>
         </div>
-      )
+      );
     });
     return (
       paletteColors
-    )
+    );
   },
 
 });

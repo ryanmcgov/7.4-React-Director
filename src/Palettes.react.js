@@ -9,7 +9,7 @@ var Palettes = React.createClass({
         return <Palette palette={item} key={item} />
       })}
       </div>
-    )
+    );
   }
 });
 

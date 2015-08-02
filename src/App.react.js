@@ -31,7 +31,7 @@ var App = React.createClass({
       <div>
       <Palettes palettes={this.state.palettes} />
       </div>
-    )
+    );
   },
 
   _getJSON: function(url, callback) {
@@ -39,6 +39,12 @@ var App = React.createClass({
     request.open('GET', url);
     request.onload = callback;
     request.send();
+  },
+
+  _updatePalettes: function(e) {
+    var updatedPalettes = this.state.palettes;
+    this.state.palettes.push(JSON.parse(e.target.responseText));
+    this.setState({palettes: updatedPalettes});
   },
 
   _initRouter: function() {
